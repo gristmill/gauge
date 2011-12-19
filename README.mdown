@@ -1,0 +1,26 @@
+# About
+Minimalist gauge widget built using [Raphael](http://raphaeljs.com).
+
+![Gauge](http://f.cl.ly/items/0S2y223q222T2C0b3U0t/gauge.png)
+
+### Usage
+
+Include [Raphael](http://raphaeljs.com) and this library.
+
+```javascript
+  window.onload = function() {
+
+    /*
+     * div       = div you want gauge rendered to
+     * percent   = percentage you want rendered
+     * fill      = background fill color
+     * highlight = highlight color used for middle circle
+     */
+
+    g = new gauge("gauge", 30, "#BED54E", "#063743");
+
+    setInterval(function() {
+      g.update(Math.floor(Math.random() * (0 - 100 + 1) + 100));
+    }, 3000);
+  }
+```
