@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <head>
+    <script type="text/javascript" src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"></script>
+    <script type="text/javascript" src="../gauge.min.js"></script>
+    <script>
+      window.onload = function() {
+        animatedGauge = new gauge("animated-gauge", 30, "#BED54E", "#063743");
+
+        setInterval(function() {
+          animatedGauge.update(Math.floor(Math.random() * (0 - 100 + 1) + 100));
+        }, 3000);
+
+        new gauge("static-gague", 60, "purple", "purple");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="animated-gauge"></div>
+    <div id="static-gague"></div>
+  </body>
+</html>
