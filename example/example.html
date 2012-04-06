@@ -4,13 +4,12 @@
     <script type="text/javascript" src="../gauge.min.js"></script>
     <script>
       window.onload = function() {
-        animatedGauge = new gauge("animated-gauge", 30, "#BED54E", "#063743");
+        animatedGauge = new gauge("animated-gauge", 30, "#BED54E", "#063743", {"threshold":{"40":"yellow","75":"red"}});
 
         setInterval(function() {
           animatedGauge.update(Math.floor(Math.random() * (0 - 100 + 1) + 100));
         }, 3000);
-
-        new gauge("static-gague", 60, "purple", "orange");
+        new gauge("static-gague", 60, "purple", "orange", {"threshold":{"80":"red"}});
       }
     </script>
   </head>
