@@ -18,7 +18,7 @@ Include [Raphael](http://raphaeljs.com) and this library.
      * opts      = extended attribute for the gauge
      */
 
-    g = new gauge("gauge", 30, "#BED54E", "#063743", {"threshold":{"40":"yellow","80":"red"}});
+    g = new gauge("gauge", 30, "#BED54E", "#063743", {"threshold":{"40":"yellow", "80":"red"}});
 
     setInterval(function() {
       g.update(Math.floor(Math.random() * (0 - 100 + 1) + 100));
