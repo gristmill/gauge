@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>gauge by gristmill</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>gauge</h1>
+        <p>Minimalist gauge widget built using Raphael</p>
+        <p class="view"><a href="https://github.com/gristmill/gauge">View the Project on GitHub <small>gristmill/gauge</small></a></p>
+        <ul>
+          <li><a href="https://github.com/gristmill/gauge/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/gristmill/gauge/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/gristmill/gauge">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Gauge</h1>
+
+<p><img src="http://f.cl.ly/items/0S2y223q222T2C0b3U0t/gauge.png" alt="Gauge"></p>
+
+<p>Gauge is a simple minimalist style gauge built with <a href="http://raphaeljs.com">Raphael</a>. Gauge is very light weight and only has a hard dependency of Raphael which weighs in at a mere 89 Kb.</p>
+
+<h1>Usage</h1>
+
+<p>Include <a href="http://raphaeljs.com">Raphael</a> and this library.</p>
+
+<div class="highlight">
+<pre>  <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * div       = div you want gauge rendered to</span>
+<span class="cm">     * percent   = percentage you want rendered</span>
+<span class="cm">     * fill      = background fill color</span>
+<span class="cm">     * highlight = highlight color used for middle circle</span>
+<span class="cm">     * opts      = extended attribute for the gauge</span>
+<span class="cm">     */</span>
+
+    <span class="nx">g</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gauge</span><span class="p">(</span><span class="s2">"gauge"</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">"#BED54E"</span><span class="p">,</span> <span class="s2">"#063743"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"threshold"</span><span class="o">:</span><span class="p">{</span><span class="s2">"40"</span><span class="o">:</span><span class="s2">"yellow"</span><span class="p">,</span> <span class="s2">"80"</span><span class="o">:</span><span class="s2">"red"</span><span class="p">}});</span>
+
+    <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">100</span><span class="p">));</span>
+    <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre>
+</div>
+
+
+<h2>Credits</h2>
+
+<p>Gauge developed by Tristan O'Neil at <a href="http://gristmill.io">Gristmill</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/gristmill">gristmill</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
